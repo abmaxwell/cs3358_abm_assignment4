@@ -4,7 +4,7 @@ project(cs3358_abm_assignment4)
 set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
-        sequence.cpp
+        sequence.template
         sequence.h
         sequenceTest.cpp)
 

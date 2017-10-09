@@ -1,14 +1,11 @@
-a4s1: sequence.o sequenceTest.o
-	g++ sequence.o sequenceTest.o -o a4s1
-sequence.o: sequence.cpp sequence.h
-	g++ -Wall -ansi -pedantic -c sequence.cpp
-sequenceTest.o: sequenceTest.cpp sequence.cpp sequence.h
+a4: sequenceTest.o
+	g++ sequenceTest.o -o a4
+sequenceTest.o: sequenceTest.cpp sequence.template sequence.h
 	g++ -Wall -ansi -pedantic -c sequenceTest.cpp
 
 test:
-	./a4s1 auto < a4test.in > a4test.out
+	./a4 auto < a4test.in > my_a4test.out
 clean:
-	@rm -rf sequence.o sequenceTest.o
+	@rm -rf sequenceTest.o
 cleanall:
-	@rm -rf sequence.o sequenceTest.o a4s1
-
+	@rm -rf sequenceTest.o a4
